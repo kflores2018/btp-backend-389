@@ -1,6 +1,6 @@
 ** Clase con interfaz para inserción de datos **
 ** Kevin Flores 6483 **
-*Testing change abap git
+*Testing change
 CLASS zcl_insert_data_kmf DEFINITION
   PUBLIC
   FINAL
