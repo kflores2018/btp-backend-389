@@ -7,6 +7,7 @@
     sizeCategory: #S,
     dataClass: #MASTER
 }
+@Metadata.allowExtensions: true
 define view entity zc_clientes_kmf_389 as select from ztb_clientes_kf as clientes
                inner join ztb_clnts_lib_kf as relclib on relclib.id_cliente = clientes.id_cliente
 {

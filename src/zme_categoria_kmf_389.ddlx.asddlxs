@@ -1,0 +1,8 @@
+@Metadata.layer: #CORE
+annotate view zc_categoria_kmf_389
+    with 
+{
+    @UI.connectedFields: [{ hidden: true }]
+    Descripcion;
+    
+}

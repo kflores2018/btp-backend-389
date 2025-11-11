@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service Definition - Libros'
+define service ZSD_LIBROS_KMF_389 {
+  expose zc_libros_kmf_389   as Libros;
+  expose zc_clientes_kmf_389 as Clientes;
+}

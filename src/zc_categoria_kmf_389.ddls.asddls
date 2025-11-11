@@ -7,6 +7,7 @@
     sizeCategory: #S,
     dataClass: #MASTER
 }
+@Metadata.allowExtensions: true
 define view entity zc_categoria_kmf_389 as select from ztb_catego_kf
 {
     key bi_categ as Categoria,

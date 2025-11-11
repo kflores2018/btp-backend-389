@@ -1,0 +1,69 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+    typeName: 'Libro',
+    typeNamePlural: 'Libros',
+    typeImageUrl: '',
+    imageUrl: 'Url',
+    title: {
+        type: #STANDARD,
+        label: '',
+        iconUrl: '',
+        criticality: '',
+        criticalityRepresentation: #WITHOUT_ICON,
+        value: 'Titulo',
+        valueQualifier: '',
+        targetElement: '',
+        url: ''
+    },
+    description: {
+        type: #STANDARD,
+        label: '',
+        iconUrl: '',
+        criticality: '',
+        criticalityRepresentation: #WITHOUT_ICON,
+        value: 'Autor',
+        valueQualifier: '',
+        targetElement: '',
+        url: ''
+    }
+}
+annotate view zc_libros_kmf_389 with
+{
+
+  @UI.facet: [{ id: 'Cliente', label: 'Clientes', type: #COLLECTION, position: 10 },
+              { id: 'Libro', parentId: 'Cliente', label: 'Clientes' , type: #FIELDGROUP_REFERENCE, targetQualifier: 'Cliente', position: 10},
+              { id: 'Categorias', parentId: 'Categorias', label: 'Categorias' , type: #LINEITEM_REFERENCE, targetElement: '_Client', position: 20}
+             ]
+  @UI.fieldGroup: [{qualifier: 'Cliente', position: 10}]
+  IdLibro;
+
+  @UI.lineItem: [{ position: 20, importance: #HIGH }]
+  Titulo;
+  @UI.lineItem: [{ position: 30, importance: #HIGH }]
+  Autor;
+  @UI.lineItem: [{ position: 40, importance: #MEDIUM }]
+  Editorial;
+  @UI.lineItem: [{ position: 50, importance: #HIGH }]
+  Idioma;
+  @UI.lineItem: [{ position: 60, importance: #MEDIUM }]
+  Paginas;
+  @UI.lineItem: [{ position: 70, importance: #HIGH }]
+  Precio;
+  @UI.lineItem: [{ position: 80, importance: #HIGH }]
+  Moneda;
+  @UI.lineItem: [{ position: 90, importance: #HIGH }]
+  Formato;
+  @UI.lineItem: [{ position: 100, importance: #HIGH }]
+  Url;
+
+  @UI.fieldGroup: [{qualifier: 'Cliente', position: 20}]
+  nombre;
+  @UI.fieldGroup: [{qualifier: 'Cliente', position: 30}]
+  apellidos;
+  @UI.fieldGroup: [{qualifier: 'Cliente', position: 40}]
+  email;
+
+  @Consumption.valueHelpDefinition: [{ entity : { name : 'ztb_catego_kf', element: ' descripcion ' } }]
+  BiCateg;
+
+}
