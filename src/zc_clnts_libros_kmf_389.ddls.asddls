@@ -13,5 +13,6 @@ define view entity zc_clnts_libros_kmf_389
   key id_libro                     as IdLibro,
       count( distinct id_cliente ) as Ventas
 }
-group by
-  id_libro;
+group by id_libro
+ 
+

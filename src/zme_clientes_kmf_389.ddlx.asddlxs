@@ -1,17 +1,51 @@
 @Metadata.layer: #CORE
+@UI.headerInfo: { 
+    typeName: 'Cliente',
+    typeNamePlural: 'Clientes',
+    imageUrl: 'url',
+    title: {
+        type: #STANDARD,
+        value: 'Nombre'
+    },
+    description: {
+        type: #STANDARD,
+        value: 'IdCliente'
+    }
+}
 annotate view zc_clientes_kmf_389 with
 {
-  @UI.lineItem: [{ position: 10, importance: #HIGH }]
-  Nombre;
 
-  @UI.lineItem: [{ position: 10, importance: #HIGH }]
-  Apellidos;
-
-  @UI.lineItem: [{ position: 10, importance: #HIGH }]
-  Email;
-
-  @UI.lineItem: [{ position: 10, importance: #HIGH }]
-  Url;
-
-
+    @UI: {
+         facet: [
+                {   id: 'DetallesCliente',
+                    label : 'Cliente',
+                    type: #COLLECTION,
+                    position: 10 },
+                {   id: 'Cliente',
+                    parentId: 'DetallesCliente',
+                    label: 'Detalles',
+                    type: #FIELDGROUP_REFERENCE,
+                    targetQualifier: 'DetallesCliente',
+                    position: 10 }
+                ],
+         lineItem: [{ position: 10,
+                      importance: #HIGH }],
+         fieldGroup: [{ qualifier: 'DetallesCliente',
+                        position: 10 }]
+     }
+     IdCliente;
+    @UI: {
+         lineItem: [{ position: 20,
+                      importance: #HIGH }],
+         fieldGroup: [{ qualifier: 'DetallesCliente',
+                        position: 20 }]
+     }     
+     acceso;
+    @UI: {
+         lineItem: [{ position: 30,
+                      importance: #HIGH }],
+         fieldGroup: [{ qualifier: 'DetallesCliente',
+                        position: 30 }]
+     }     
+     Email;
 }
