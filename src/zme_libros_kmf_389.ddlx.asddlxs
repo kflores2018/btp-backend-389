@@ -65,7 +65,7 @@ annotate view zc_libros_kmf_389 with
                    importance: #HIGH }]
   Autor;
   @Consumption.valueHelpDefinition: [{ entity: {
-      name: 'zc_catego_caz',
+      name: 'zc_categoria_kmf_389',
       element: 'Descripcion'
   } }]
   @UI: { fieldGroup: [{ qualifier: 'DetallesLibro',
